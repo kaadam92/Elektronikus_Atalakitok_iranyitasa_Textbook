@@ -55,12 +55,12 @@
 \node[
 	anchor=south east,
 	inner sep=0pt,
-	outer sep=0pt] (partnum) at ([xshift=-20pt]parttop.south) 
+	outer sep=0pt] (partnum) at ([xshift=-20pt]parttop.south)
 	{\sectionnumfont\thesection};
 \node[
 	anchor=north east,
 	align=right,
-	inner xsep=0pt] at ([yshift=-0.5cm]partname.east|-partnum.south) 
+	inner xsep=0pt] at ([yshift=-0.5cm]partnum.east|-partnum.south) 
 	{\parbox{.7\textwidth}{\raggedleft#1}};
 \end{tikzpicture}%
 }
