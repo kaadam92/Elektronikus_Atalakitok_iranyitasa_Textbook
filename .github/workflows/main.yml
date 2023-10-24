@@ -49,13 +49,13 @@ jobs:
 
     - name: Check pdf file
       run: |
-        file EAI_Textbook.pdf | grep -q ' PDF '
+        file main.pdf | grep -q ' PDF '
 
     - name: Upload file to repository
       run: |
         git config --global user.name "kaadam92"
         git config --global user.email "kiss.david92@gmail.com"
-        git add EAI_Textbook.pdf
+        git add main.pdf
         git commit -m "PDF output generated automatically"
         git push
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
